@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,6 +13,14 @@ var campaignsRouter = require('./routes/campaigns');
 var categoriesRouter = require('./routes/categories');
 
 var app = express();
+
+  // CORS configuration
+  app.use(cors({
+    origin: true, // Allow all origins
+    credentials: true, // Allow cookies and authentication headers
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+  }));
 
 app.use(logger('dev'));
 app.use(express.json());
