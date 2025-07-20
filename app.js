@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
 var donationsRouter = require('./routes/donations');
+var campaignsRouter = require('./routes/campaigns');
+var categoriesRouter = require('./routes/categories');
 
 var app = express();
 
@@ -21,5 +23,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/donations', donationsRouter);
+app.use('/campaigns', campaignsRouter);
+app.use('/categories', categoriesRouter);
 
 module.exports = app;

@@ -50,6 +50,10 @@ db.Donation.belongsTo(db.Campaign, { foreignKey: 'campaign_id', as: 'campaign' }
 db.Donation.hasMany(db.PaymentNotification, { foreignKey: 'donation_id', as: 'notifications' });
 db.PaymentNotification.belongsTo(db.Donation, { foreignKey: 'donation_id', as: 'donation' });
 
+// Category associations - gunakan alias yang berbeda
+db.Category.hasMany(db.Campaign, { foreignKey: 'category', sourceKey: 'name', as: 'campaigns' });
+db.Campaign.belongsTo(db.Category, { foreignKey: 'category', targetKey: 'name', as: 'categoryData' });
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
