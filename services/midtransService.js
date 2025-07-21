@@ -29,9 +29,9 @@ module.exports = {
           }
         ],
         callbacks: {
-          finish: `https://donasiku.vercel.app/donations/success`,
-          error: `https://donasiku.vercel.app/donations/error`,
-          pending: `https://donasiku.vercel.app/donations/pending`
+          finish: `https://sedekahkita.vercel.app/donations/success`,
+          error: `https://sedekahkita.vercel.app/donations/error`,
+          pending: `https://sedekahkita.vercel.app/donations/pending`
         }
       };
 
