@@ -29,9 +29,9 @@ module.exports = {
           }
         ],
         callbacks: {
-          finish: `${process.env.BASE_URL}/donations/success`,
-          error: `${process.env.BASE_URL}/donations/error`,
-          pending: `${process.env.BASE_URL}/donations/pending`
+          finish: `https://donasiku.vercel.app/donations/success`,
+          error: `https://donasiku.vercel.app/donations/error`,
+          pending: `https://donasiku.vercel.app/donations/pending`
         }
       };
 
