@@ -22,7 +22,7 @@ module.exports = {
         current_amount: 0,
         image_url: image_url || null,
         category,
-        status: 'pending',
+        status: 'active',
         user_id
       });
 
